@@ -33,3 +33,10 @@ remove-edge-container:
 
 clean-edge-container:
 	docker rm --force edge-container
+
+.PHONY: reload-config
+
+reload-config:
+	docker exec \
+		edge-container \
+		nginx -s reload
