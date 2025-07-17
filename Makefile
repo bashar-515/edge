@@ -3,7 +3,7 @@
 run-edge-container:
 	docker run \
   		--name edge-container \
-  		--volume ./edge/nginx.conf:/etc/nginx/nginx.conf:ro \
+  		--volume ./nginx.conf:/etc/nginx/nginx.conf:ro \
 		--publish 80:80 \
   		--detach nginx
 
