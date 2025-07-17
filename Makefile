@@ -1,3 +1,14 @@
+.PHONY: dameonize-edge-container
+
+daemonize-edge-container:
+	docker run \
+  		--name edge-container \
+  		--volume ./nginx.conf:/etc/nginx/nginx.conf:ro \
+		--publish 80:80 \
+  		--detach \
+		--restart unless-stopped \
+		nginx
+
 .PHONY: run-edge-container
 
 run-edge-container:
@@ -5,7 +16,8 @@ run-edge-container:
   		--name edge-container \
   		--volume ./nginx.conf:/etc/nginx/nginx.conf:ro \
 		--publish 80:80 \
-  		--detach nginx
+  		--detach \
+		nginx
 
 .PHONY: stop-edge-container
 
