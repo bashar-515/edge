@@ -5,6 +5,7 @@ daemonize-edge-container:
   		--name edge-container \
   		--volume ./nginx.conf:/etc/nginx/nginx.conf:ro \
 		--publish 80:80 \
+		--network pi-1-network \
   		--detach \
 		--restart unless-stopped \
 		nginx
