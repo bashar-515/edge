@@ -1,0 +1,9 @@
+:80 {
+  handle /test {
+    respond "test" 200
+  }
+}
+
+app.project-banana.com {
+    reverse_proxy pb-server:8080
+}
