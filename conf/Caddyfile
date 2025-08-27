@@ -1,5 +1,5 @@
 http://app.project-banana.com {
-    reverse_proxy pb-server:8080
+    reverse_proxy pb-proxy:8080
 
     handle /test {
       respond "test" 200
