@@ -1,4 +1,4 @@
-http://app.project-banana.com {
+app.project-banana.com {
     reverse_proxy pb-proxy:8080
 
     handle /test {
