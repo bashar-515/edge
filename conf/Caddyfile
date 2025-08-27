@@ -4,7 +4,6 @@
   }
 }
 
-app.project-banana.com {
-    auto_https off
+http://app.project-banana.com {
     reverse_proxy pb-server:8080
 }
